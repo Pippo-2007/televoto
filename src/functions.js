@@ -2,7 +2,7 @@
 async function caricaConcorrenti() {
     let id = leggiCookie("televoto");
     if(id != null){
-        window.location.replace("/votato.html");
+        window.location.replace("./votato.html");
         return;
     }
 
@@ -62,7 +62,7 @@ async function caricaConcorrenti() {
 
                     console.log("Voto inserito:", risultato);
                     creaCookie("televoto",risultato.idVoto);
-                    window.location.replace("/votato.html");
+                    window.location.replace("./votato.html");
                     return;
                 } catch (error) {
                     console.error(
