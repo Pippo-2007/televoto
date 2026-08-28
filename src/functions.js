@@ -16,7 +16,7 @@ async function caricaConcorrenti() {
 
     try {
         const response = await fetch(
-            "http://https://zinaweb.altervista.org/grest/getListaConcorrenti.php"
+            "https://zinaweb.altervista.org/grest/getListaConcorrenti.php"
         );
 
         if (!response.ok) {
@@ -45,7 +45,7 @@ async function caricaConcorrenti() {
                     formData.append("idCandidato", concorrente.codice);
 
                     const responseVoto = await fetch(
-                        "http://https://zinaweb.altervista.org/grest/invioVoto.php",
+                        "https://zinaweb.altervista.org/grest/invioVoto.php",
                         {
                             method: "POST",
                             body: formData
@@ -126,7 +126,7 @@ async function caricaVotato() {
 
     try {
         const response = await fetch(
-            `http://https://zinaweb.altervista.org/grest/getVoto.php?idVoto=${encodeURIComponent(idVoto)}`
+            `https://zinaweb.altervista.org/grest/getVoto.php?idVoto=${encodeURIComponent(idVoto)}`
         );
 
         if (!response.ok) {
