@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background: #001633;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 55px 20px 35px;
+}
+
+header h1 {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: white;
+}
+
+header h2 {
+    margin-top: 5px;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: white;
+}
+
+/* CONTENITORE */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* GRIGLIA CONCORRENTI */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 35px;
+}
+
+/* SINGOLO CONCORRENTE */
+
+.concorrenti {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    min-height: 80px;
+}
+
+/* NUMERO */
+
+.codice {
+    position: relative;
+
+    min-width: 60px;
+
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1;
+
+    color: #ff9d2e;
+}
+
+/* LINEA SOTTO IL NUMERO */
+
+.codice::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -12px;
+
+    width: 50px;
+    height: 2px;
+
+    background: #ff9d2e;
+
+    box-shadow: 0 2px 5px rgba(255, 157, 46, 0.35);
+}
+
+/* NOME */
+
+.nome {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.1;
+
+    color: white;
+    text-transform: uppercase;
+}
+
+/* HOVER */
+
+.concorrenti {
+    transition: transform 0.2s ease;
+}
+
+.concorrenti:hover {
+    transform: translateX(5px);
+}
+
+.concorrenti:hover .codice {
+    text-shadow: 0 0 12px rgba(255, 157, 46, 0.5);
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .nome {
+        font-size: 1.5rem;
+    }
+
+    .codice {
+        font-size: 2.2rem;
+        min-width: 50px;
+    }
+}

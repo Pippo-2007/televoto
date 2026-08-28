@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background: #001633;
+    overflow-x: hidden;
+
+    /* Bagliori luminosi */
+    background-image:
+        radial-gradient(
+            circle at 0% 25%,
+            rgba(255, 115, 40, 0.55) 0%,
+            rgba(0, 180, 255, 0.25) 8%,
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 100% 15%,
+            rgba(255, 120, 40, 0.6) 0%,
+            rgba(0, 190, 255, 0.3) 10%,
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 15% 100%,
+            rgba(0, 180, 255, 0.35),
+            transparent 30%
+        ),
+        #001633;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 70px 20px 45px;
+    position: relative;
+}
+
+header h1 {
+    font-size: clamp(3rem, 9vw, 7rem);
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(0, 190, 255, 0.35);
+}
+
+header h2 {
+    margin-top: 5px;
+
+    font-size: clamp(1.4rem, 4vw, 2.5rem);
+    font-weight: 400;
+    letter-spacing: 5px;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(0, 200, 255, 0.4);
+}
+
+/* LINEA LUMINOSA */
+
+header::after {
+    content: "";
+
+    display: block;
+
+    width: 350px;
+    max-width: 80%;
+    height: 2px;
+
+    margin: 30px auto 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ff9d3d,
+        #ffffff,
+        #ff9d3d,
+        transparent
+    );
+
+    box-shadow:
+        0 0 8px #ff9d3d,
+        0 0 20px rgba(255, 157, 61, 0.6);
+}
+
+/* MAIN */
+
+main {
+    width: 100%;
+    padding: 20px;
+}
+
+.container {
+    width: min(750px, 100%);
+    margin: 0 auto;
+}
+
+/* CARD CONCORRENTE */
+
+.concorrenti {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 22px 28px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(75, 210, 255, 0.35);
+    border-radius: 8px;
+
+    background: rgba(0, 22, 51, 0.75);
+
+    box-shadow:
+        0 0 15px rgba(0, 180, 255, 0.12),
+        inset 0 0 20px rgba(0, 160, 255, 0.05);
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.3s ease;
+}
+
+/* .concorrenti:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(0, 210, 255, 0.8);
+
+    box-shadow:
+        0 0 20px rgba(0, 200, 255, 0.25),
+        0 0 50px rgba(0, 150, 255, 0.1);
+} */
+
+/* NUMERO */
+
+.codice {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 4px;
+
+    font-size: 1.7rem;
+    font-weight: 800;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #008dcc,
+        #00c8ff
+    );
+
+    box-shadow:
+        0 0 10px rgba(0, 200, 255, 0.5),
+        0 0 25px rgba(0, 150, 255, 0.2);
+}
+
+/* NOME */
+
+.nome {
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    header {
+        padding-top: 45px;
+    }
+
+    header h1 {
+        letter-spacing: 2px;
+    }
+
+    header h2 {
+        letter-spacing: 3px;
+    }
+
+    .concorrenti {
+        gap: 15px;
+        padding: 16px;
+    }
+
+    .codice {
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+    }
+
+    .nome {
+        font-size: 1.25rem;
+    }
+}
