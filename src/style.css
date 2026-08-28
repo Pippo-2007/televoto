@@ -55,11 +55,29 @@ header h2 {
 /* SINGOLO CONCORRENTE */
 
 .concorrenti {
+    position: relative;
+
     display: flex;
     align-items: center;
+
     gap: 25px;
 
-    min-height: 80px;
+    padding: 22px 28px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(75, 210, 255, 0.35);
+    border-radius: 8px;
+
+    background: rgba(0, 22, 51, 0.75);
+
+    box-shadow:
+        0 0 15px rgba(0, 180, 255, 0.12),
+        inset 0 0 20px rgba(0, 160, 255, 0.05);
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.3s ease;
 }
 
 /* NUMERO */
