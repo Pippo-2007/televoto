@@ -62,7 +62,8 @@ async function caricaConcorrenti() {
 
                     console.log("Voto inserito:", risultato);
                     creaCookie("televoto",risultato.idVoto);
-
+                    window.location.replace("/votato.html");
+                    return;
                 } catch (error) {
                     console.error(
                         "Errore nell'inserimento del voto:",
